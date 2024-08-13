@@ -175,6 +175,19 @@
 
     <button disabled={setButtonDisabled} onclick={pickInner}>Pick Inner</button>
   {/if}
+  <br />
+  <br />
+  <details>
+    <summary>Debug</summary>
+    {#each sets as set}
+      <h2>{set.name}</h2>
+      <ul>
+        {#each set.inner as item}
+          <li>{item}</li>
+        {/each}
+      </ul>
+    {/each}
+  </details>
 {/if}
 
 <style lang="scss">
